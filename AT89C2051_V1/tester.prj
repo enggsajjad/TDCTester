@@ -1,0 +1,460 @@
+ProView32 Project File
+File Version=1
+[Ref]
+Ref=0
+[Environment]
+Begin Group CompEdit
+Prompttoreloadfiles=0
+Promptsucsorfail=0
+Promptenddebug=1
+Promptsave=0
+End Group CompEdit
+Begin Group Edit
+Promptbeforedelete=0
+Oemtoascii=0
+Decalage=2
+Undonumber=10
+TabStop=3
+End Group Edit
+Begin Group Font
+Height=12
+Name=courier new
+Default=1
+End Group Font
+Begin Group Colors
+Error=255
+String=16711680
+Operator=8421504
+Key=0
+Comment=8421376
+Control=32768
+Numeric=16711680
+Identifier=8388608
+Highlight=1
+End Group Colors
+End Options Environment
+
+[Directories]
+Begin Group Directories
+List=
+Object=
+Lib=C:\FSI\LIB
+Include=C:\FSI\INC
+End Group Directories
+End Options Directories
+
+[Tools]
+Number=7
+
+Path=C:\FSI\BIN\A51V32.DLL
+Name=A51
+SrcExt=*.asm;*.a51;*.inc
+ObjExt=*.obj
+Target Translate=0
+Begin Options A51
+Begin Group Object
+Reg3=0
+Reg2=0
+Reg1=0
+Reg0=1
+Debug=1
+Object=1
+End Group Object
+Begin Group Listing
+Pagewidth=80
+Pagelength=60
+Formfeed=0
+Xref=1
+Symbols=1
+Print=1
+Listinclude=0
+Cond=1
+List=1
+Gen=1
+End Group Listing
+Begin Group Set
+Sets=
+End Group Set
+Begin Group Source
+Macro=0
+Mod51=1
+End Group Source
+End Options A51
+
+Path=C:\FSI\BIN\AXAV32.DLL
+Name=AXA
+SrcExt=*.asm;*.axa;*.inc
+ObjExt=*.obj
+Target Translate=0
+Begin Options AXA
+Begin Group Object
+Reg3=0
+Reg2=0
+Reg1=0
+Reg0=1
+Debug=1
+Object=1
+End Group Object
+Begin Group Listing
+Pagewidth=80
+Pagelength=60
+Formfeed=0
+Xref=1
+Symbols=1
+Print=1
+Listinclude=0
+Cond=1
+List=1
+Gen=1
+End Group Listing
+Begin Group Set
+Sets=
+End Group Set
+Begin Group Source
+Macro=0
+Mod51=1
+End Group Source
+End Options AXA
+
+Path=C:\FSI\BIN\C51V32.DLL
+Name=C51
+SrcExt=*.c;*.h;*.c51
+ObjExt=*.obj
+Target Translate=0
+Begin Options C51
+Begin Group QCW
+Useqcw=0
+Qcw=
+End Group QCW
+Begin Group Messages
+Maxwarn=25
+Maxerr=25
+Warning=2
+End Group Messages
+Begin Group Optimizer
+Optimlevel=6
+Optsize=0
+Optspeed=1
+End Group Optimizer
+Begin Group Registers
+Registerbank=0
+Regparms=1
+Aregs=1
+End Group Registers
+Begin Group Memory Model
+Xram=0
+Useexternal=0
+Mod517=0
+Modamd=0
+Mod517nodp8=0
+Mod517noau=0
+Romlarge=1
+Romsmall=0
+Romcompact=0
+Huge=0
+Large=0
+Small=1
+Compact=0
+End Group Memory Model
+Begin Group Object
+Intvector=0
+Interval=8
+Maxargs=15
+Interruptvectors=1
+Order=0
+ObjectExtended2=0
+ObjectExtended=1
+Debug=0
+Object=1
+Src=0
+End Group Object
+Begin Group Listing 
+Pagewidth=80
+Pagelength=60
+Formfeed=0
+Symbols=1
+Print=1
+Listinclude=0
+Cond=1
+Code=1
+End Group Listing 
+Begin Group Defines
+Defines=
+End Group Defines
+Begin Group Code generation
+Unsignedchar=0
+Intpromote=1
+Generic=1
+Initstatic=0
+Auto=0
+End Group Code generation
+Begin Group Floating point
+Ieeerevers=0
+Ieeestd=0
+Bcdldouble=0
+Bcddouble=0
+Bcdfloat=0
+Bcdall=0
+Nofloat=1
+End Group Floating point
+Begin Group Source
+Extend=1
+Ansi=0
+End Group Source
+End Options C51
+
+Path=C:\FSI\BIN\CXAV32.DLL
+Name=CXA
+SrcExt=*.c;*.h;*.cxa
+ObjExt=*.obj
+Target Translate=0
+Begin Options CXA
+Begin Group QCW
+Useqcw=0
+Qcw=
+End Group QCW
+Begin Group Messages
+Maxwarn=25
+Maxerr=25
+Warning=2
+End Group Messages
+Begin Group Optimizer
+Optimlevel=6
+Optsize=0
+Optspeed=1
+End Group Optimizer
+Begin Group Memory Model
+Huge=0
+Large=0
+Small=1
+Compact=0
+Tiny=0
+End Group Memory Model
+Begin Group Object
+ObjectExtended=1
+Debug=1
+Object=1
+Src=0
+End Group Object
+Begin Group Listing 
+Pagewidth=80
+Pagelength=60
+Formfeed=0
+Symbols=1
+Print=1
+Listinclude=0
+Cond=1
+Code=1
+End Group Listing 
+Begin Group Defines
+Defines=
+End Group Defines
+Begin Group Code generation
+Unsignedchar=0
+Intpromote=1
+Generic=1
+Initstatic=0
+End Group Code generation
+Begin Group Floating point
+Ieeestd=0
+Nofloat=1
+End Group Floating point
+Begin Group Source
+Extend=1
+Ansi=0
+End Group Source
+End Options CXA
+
+Path=C:\FSI\BIN\L51V32.DLL
+Name=L51
+SrcExt=*.obj;
+ObjExt=*.abs
+Target Translate=1
+Begin Options L51
+Begin Group Monitor
+Crystal=12.000
+Baudrate=3
+Codewriteable=1
+Uart2=0
+Uart1=0
+Uart0=1
+Huge=0
+Large=0
+Compact=0
+Small=0
+Tiny=1
+End Group Monitor
+Begin Group Flashing
+Flsfile=
+ResBit=0
+ResBData=0
+ResData=0
+Startaddr=8000
+Lockedmode=0
+Nb Obj=1
+f:\at89c2051_v1\main.OBJ
+Nb Flash=0
+End Group Flashing
+Begin Group Listing
+Pagewidth=80
+Pagelength=60
+Formfeed=0
+LKIX=1
+End Group Listing
+Begin Group Kernel
+Divide_3_T=60
+Divide_2_T=10
+Divide_1_T=100
+Tim0_Init_T=1000
+EnableDef_T=1
+End Group Kernel
+Begin Group Bank switching
+Editequation=?B_CURRENTBANK
+Editmacro=mov	A,?B_CURRENTBANK§¤anl	P1,#0f8h§¤orl	P1,A
+Maxaddr=FFFF
+Minaddr=8000
+Maxpage=32
+Genmacro=1
+Noplm=1
+Nb Modules=4
+MAIN F:\AT89C2051_V1\MAIN.OBJ 2147483647
+C3S C:\FSI\LIB\C51S.LIB 2147483647
+IPGN1 C:\FSI\LIB\C51S.LIB 2147483647
+_C_IDATALEN C:\FSI\LIB\C51S.LIB 2147483647
+End Group Bank switching
+Begin Group More
+More=
+End Group More
+Begin Group Linker
+Monitor=0
+AdrBit=0000
+AdrIdata=0000
+AdrData=0000
+AdrXdata=0000
+AdrCode=0000
+Ramsize=128
+HEX=1
+EXTEND=0
+LKKRSEM=0
+LKKRDEB=0
+KKRH=0
+KKRX=0
+KKRY=0
+LKDEB=1
+LKKR=0
+LKFP=0
+LKLIB=1
+End Group Linker
+End Options L51
+
+Path=C:\FSI\BIN\LXAV32.DLL
+Name=LXA
+SrcExt=*.obj
+ObjExt=*.abs
+Target Translate=1
+Begin Options LXA
+Begin Group Monitor
+Crystal=14.7456
+Baudrate=3
+Codewriteable=1
+Uart0=1
+Huge=0
+Large=0
+Compact=0
+Small=0
+Tiny=1
+End Group Monitor
+Begin Group Kernel
+Divide_3_T=60
+Divide_2_T=10
+Divide_1_T=100
+Tim0_Init_T=1000
+EnableDef_T=1
+End Group Kernel
+Begin Group More
+More=
+End Group More
+Begin Group Linker
+SysStacksize=256
+Stacksize=0
+Pagewidth=80
+Pagelength=60
+Ramsize=512
+Monitor=0
+Formfeed=0
+DBG=0
+HEX=0
+LKIX=1
+LKDEB=1
+LKKRPG0=0
+LKKRSEM=0
+LKKRDEB=0
+LKKR=0
+LKFP=0
+LKLIB=1
+End Group Linker
+End Options LXA
+
+Path=C:\FSI\BIN\OH51V32.DLL
+Name=OH51
+SrcExt=*.abs
+ObjExt=*.hex
+Target Translate=0
+Begin Options OH51
+End Options OH51
+
+
+[Nodes]
+App Number=1
+Name=TESTER.PRJ
+Tool Ref=
+Info Code=230
+Info XData=0
+Info Data=73
+Use Local=0
+Nb Nodes=1
+Node Begin
+Relative Path=main.c
+Tool Ref=C51
+Nb Dep=2
+Dependance=f:\at89c2051_v1\reg2051.h
+Dependance=C:\FSI\INC\intrins.h
+Info Code=166
+Info Const=0
+Info XData=0
+Info PData=0
+Info Data=1
+Info IData=0
+Info Bit=1
+Use Local=0
+Do Link=1
+Node End
+
+
+[Desktop Files]
+Nb Desktop Files=1
+f:\at89c2051_v1\main.c (44,44-950,541) 0
+
+
+[Closed Files]
+Nb Closed Files=0
+
+[Dim Views]
+Nb Dim Views=13
+0 (0,0-0,0)
+1 (0,0-0,0)
+2 (4,496-768,743)
+3 (0,0-0,0)
+4 (0,0-0,0)
+5 (0,0-0,0)
+6 (0,0-0,0)
+7 (0,0-0,0)
+8 (0,0-0,0)
+9 (0,0-0,0)
+10 (0,0-0,0)
+11 (0,0-0,0)
+12 (0,0-0,0)
+
+[DebugTool]
+Debug=
+

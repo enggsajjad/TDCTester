@@ -1,0 +1,57 @@
+m255
+o
+cModel Technology
+dF:\TDC\07-02-11TEST_CIRCUIT
+vclk4x
+IJlMfTOaQ^>FE3g@hhebE<0
+VOnS>Y0FBnL_WX1ZAcm`SP1
+w1297324735
+Fclk4x.vf
+L0 5
+OX;L;5.6e;17
+r1
+31
+o-O0
+vglbl
+I;3bdO6U;R_i?oXm0zZ=6m3
+V]6_PH00iDgcD`AVz9`gA:0
+dF:\sultan\ChronoTester\20110301TEST_CIRCUIT
+w1059855546
+FC:/Xilinx61/verilog/src/glbl.v
+L0 5
+OX;L;5.6e;17
+r1
+31
+o-O0
+vtestcounter
+IS0Nbjf^?NnghBM9mG=>P@2
+VNGnd>fGHUeMdgKJdl4A@j1
+dF:\sultan\ChronoTester\20110301TEST_CIRCUIT
+w1317791902
+Ftestcounter_timesim.v
+L0 18
+OX;L;5.6e;17
+r1
+31
+o-O0
+vtf
+IHX:Uf[NGMKd3Tij?25Mml1
+VCnihWO^VXAg;=KMoYDY;b1
+w1297333994
+Ftf.v
+L0 3
+OX;L;5.6e;17
+r1
+31
+o-O0
+vtf2
+I<3=USLPLH=0KJ4ezdRLCV3
+VkGQ`X=Nk[Y]UcRdTXD;Gn0
+dF:\sultan\ChronoTester\20110301TEST_CIRCUIT
+w1317792072
+Ftf2.v
+L0 3
+OX;L;5.6e;17
+r1
+31
+o-O0

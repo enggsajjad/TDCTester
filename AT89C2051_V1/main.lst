@@ -1,0 +1,298 @@
+C51 COMPILER V6.11.4C,  MAIN                      03/12/110  16:10:19  PAGE  1
+
+QCW(0x00002D1A)
+
+WIN32 C51 COMPILER V6.11.4C, COMPILATION OF MODULE MAIN      
+OBJECT MODULE PLACED IN f:\at89c2051_v1\main.obj
+COMPILER INVOKED BY: C51.EXE F:\AT89C2051_V1\MAIN.C OBJECT(F:\AT89C2051_V1\MAIN.
+            -OBJ) PIN(C:\FSI\INC) NOAM PR(F:\AT89C2051_V1\MAIN.LST) CD SB OE(1) 
+            -SM FP(NOFLOAT) PW(80) 
+
+stmt level    source
+   1          #include<reg2051.h>
+   2          #include<intrins.h> 
+   3          sbit relay = P1^3;
+   4          sbit UP_DWN  = P1^4;
+   5          sbit CLK = P1^5;
+   6          bit rxflag;
+   7          unsigned char rxChr;
+   8          
+   9          void Delay25ms(void)
+  10          {
+  11   1      	TL0 = 0x4C;//25ms
+  12   1      	TH0 = 0x00;
+  13   1      	TR0 = 1;
+  14   1      	while(!TF0);
+  15   1      	TR0 = 0;
+  16   1      	TF0 = 0;
+  17   1      }
+  18          void PrintChar(unsigned char c)
+  19          {
+  20   1      
+  21   1      	TI=1;
+  22   1      	while (!TI);	TI=0;	SBUF = c;
+  23   1      	while (!TI);	TI=0;
+  24   1      }
+  25          void PrintString(char *s)
+  26          {
+  27   1      	while (*s)
+  28   1      	{
+  29   2      		PrintChar(*s);
+  30   2      		s++;
+  31   2      	}
+  32   1      }
+  33          void main(void)
+  34          {
+  35   1      	SCON = 0x50;
+  36   1      	TMOD = 0x21;
+  37   1      	TL1 = 0xFD;
+  38   1      	TH1 = 0xFD;
+  39   1      	TR1 = 1;
+  40   1      	ES	  	= 1;
+  41   1      	EA   	= 1;
+  42   1      	PrintChar('A');
+  43   1      	PrintChar('A');
+  44   1      	PrintChar('A');
+  45   1      	while(1)
+  46   1      	{
+  47   2      	 	if(rxflag)
+  48   2      	 	{
+  49   3      	 	 	rxflag = 0;
+  50   3      	 	 	switch(rxChr)
+  51   3      	 	 	{
+  52   4      	 	 		case 'a':
+  53   4      			 	 	relay = 1;
+  54   4      					Delay25ms();
+  55   4      					Delay25ms();
+  56   4      					relay =0;
+  57   4      					break;
+  58   4      				case 'u':
+  59   4      					UP_DWN = 1;
+  60   4      					break;
+  61   4      				case 'd':
+  62   4      					UP_DWN = 0;
+  63   4      					break;
+  64   4      				case 'b':
+  65   4      					CLK = 0;
+  66   4      					Delay25ms();
+  67   4      					CLK =1;
+  68   4      					break;
+  69   4      				default:
+  70   4      					//PrintChar(rxChr);
+  71   4      					break;
+  72   4      			}//sw
+  73   3      	 	}//rxflag
+  74   2      	}//while
+  75   1      }//main
+  76          void Serial() interrupt 4
+  77          {
+  78   1      	if (RI)
+  79   1      	{
+  80   2      		RI = 0;
+  81   2        		rxChr = SBUF;
+  82   2        		rxflag = 1;
+  83   2        	}//End if
+  84   1      }
+  85          
+  86          
+  87          
+  88          
+C51 COMPILER V6.11.4C,  MAIN                      03/12/110  16:10:19  PAGE  2
+
+ASSEMBLY LISTING OF GENERATED OBJECT CODE
+
+            ; FUNCTION Delay25ms (BEGIN)
+                                           ; SOURCE LINE # 11 
+0000 758A4C         MOV    TL0,#04CH
+                                           ; SOURCE LINE # 12 
+0003 758C00         MOV    TH0,#000H
+                                           ; SOURCE LINE # 13 
+0006 D28C           SETB   TR0
+0008         ?WHILE1:
+                                           ; SOURCE LINE # 14 
+0008 308DFD         JNB    TF0,?WHILE1
+                                           ; SOURCE LINE # 15 
+000B C28C           CLR    TR0
+                                           ; SOURCE LINE # 16 
+000D C28D           CLR    TF0
+000F 22             RET    
+
+            ; FUNCTION Delay25ms (END)
+
+            ; FUNCTION _PrintChar (BEGIN)
+              ; Register R7 is assigned to parameter c
+                                           ; SOURCE LINE # 21 
+0000 D299           SETB   TI
+0002         ?WHILE4:
+                                           ; SOURCE LINE # 22 
+0002 3099FD         JNB    TI,?WHILE4
+0005 C299           CLR    TI
+0007 8F99           MOV    SBUF,R7
+0009         ?WHILE5:
+                                           ; SOURCE LINE # 23 
+0009 3099FD         JNB    TI,?WHILE5
+000C C299           CLR    TI
+000E 22             RET    
+
+            ; FUNCTION _PrintChar (END)
+
+            ; FUNCTION _PrintString (BEGIN)
+              ; Register R0R4R5 is assigned to parameter s
+                                           ; SOURCE LINE # 30 
+0000 EB             MOV    A,R3
+0001 FD             MOV    R5,A
+0002 EA             MOV    A,R2
+0003 FC             MOV    R4,A
+0004 E9             MOV    A,R1
+0005 F8             MOV    R0,A
+0006         ?WHILE7:
+                                           ; SOURCE LINE # 27 
+0006 ED             MOV    A,R5
+0007 FB             MOV    R3,A
+0008 EC             MOV    A,R4
+0009 FA             MOV    R2,A
+000A E8             MOV    A,R0
+000B F9             MOV    R1,A
+000C 120000  R      LCALL  IPGN1?C
+000F 6014           JZ     ?NXT7
+                                           ; SOURCE LINE # 29 
+0011 ED             MOV    A,R5
+0012 FB             MOV    R3,A
+0013 EC             MOV    A,R4
+0014 FA             MOV    R2,A
+0015 E8             MOV    A,R0
+0016 F9             MOV    R1,A
+0017 120000  R      LCALL  IPGN1?C
+001A FF             MOV    R7,A
+001B 120000  R      LCALL  _PrintChar
+                                           ; SOURCE LINE # 30 
+001E 08             INC    R0
+001F E8             MOV    A,R0
+0020 70E4           JNZ    ?WHILE7
+0022 0C             INC    R4
+0023 80E1           SJMP   ?WHILE7
+0025         ?NXT7:
+0025 22             RET    
+
+            ; FUNCTION _PrintString (END)
+
+            ; FUNCTION main (BEGIN)
+                                           ; SOURCE LINE # 35 
+0000 759850         MOV    SCON,#050H
+                                           ; SOURCE LINE # 36 
+0003 758921         MOV    TMOD,#021H
+                                           ; SOURCE LINE # 37 
+0006 758BFD         MOV    TL1,#0FDH
+                                           ; SOURCE LINE # 38 
+0009 758DFD         MOV    TH1,#0FDH
+                                           ; SOURCE LINE # 39 
+000C D28E           SETB   TR1
+                                           ; SOURCE LINE # 40 
+000E D2AC           SETB   ES
+                                           ; SOURCE LINE # 41 
+0010 D2AF           SETB   EA
+                                           ; SOURCE LINE # 42 
+0012 7F41           MOV    R7,#041H
+0014 120000  R      LCALL  _PrintChar
+                                           ; SOURCE LINE # 43 
+0017 120000  R      LCALL  _PrintChar
+                                           ; SOURCE LINE # 44 
+001A 120000  R      LCALL  _PrintChar
+001D         ?WHILE9:
+                                           ; SOURCE LINE # 47 
+001D 3000FD  R      JNB    rxflag,?WHILE9
+                                           ; SOURCE LINE # 49 
+0020 C200    R      CLR    rxflag
+                                           ; SOURCE LINE # 50 
+0022 E500    R      MOV    A,rxChr
+0024 249F           ADD    A,#09FH
+0026 600D           JZ     ?CASE4
+0028 14             DEC    A
+0029 601E           JZ     ?CASE5
+002B 24FE           ADD    A,#0FEH
+002D 6016           JZ     ?CASE6
+002F 24EF           ADD    A,#0EFH
+0031 600E           JZ     ?CASE7
+0033 801B           SJMP   ?NXT13
+0035         ?CASE4:
+                                           ; SOURCE LINE # 53 
+0035 D293           SETB   relay
+                                           ; SOURCE LINE # 54 
+0037 120000  R      LCALL  Delay25ms
+                                           ; SOURCE LINE # 55 
+003A 120000  R      LCALL  Delay25ms
+                                           ; SOURCE LINE # 56 
+003D C293           CLR    relay
+                                           ; SOURCE LINE # 57 
+003F 80DC           SJMP   ?WHILE9
+0041         ?CASE7:
+                                           ; SOURCE LINE # 59 
+0041 D294           SETB   UP_DWN
+                                           ; SOURCE LINE # 60 
+0043 80D8           SJMP   ?WHILE9
+0045         ?CASE6:
+                                           ; SOURCE LINE # 62 
+0045 C294           CLR    UP_DWN
+                                           ; SOURCE LINE # 63 
+0047 80D4           SJMP   ?WHILE9
+0049         ?CASE5:
+                                           ; SOURCE LINE # 65 
+0049 C295           CLR    CLK
+                                           ; SOURCE LINE # 66 
+004B 120000  R      LCALL  Delay25ms
+                                           ; SOURCE LINE # 67 
+004E D295           SETB   CLK
+0050         ?NXT13:
+                                           ; SOURCE LINE # 71 
+0050 80CB           SJMP   ?WHILE9
+
+            ; FUNCTION main (END)
+
+            ; FUNCTION Serial (BEGIN)
+                                           ; SOURCE LINE # 82 
+0000 C0D0           PUSH   PSW
+                                           ; SOURCE LINE # 78 
+0002 309807         JNB    RI,?NXT17
+                                           ; SOURCE LINE # 80 
+0005 C298           CLR    RI
+                                           ; SOURCE LINE # 81 
+0007 859900  R      MOV    rxChr,SBUF
+                                           ; SOURCE LINE # 82 
+000A D200    R      SETB   rxflag
+000C         ?NXT17:
+000C D0D0           POP    PSW
+000E 32             RETI   
+
+            ; FUNCTION Serial (END)
+
+C51 COMPILER V6.11.4C,  MAIN                      03/12/110  16:10:19  PAGE  3
+
+NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
+====                                    =====   ======  ====    ======  ====
+
+rxflag . . . . . . . . . . . . . . . .  PUBLIC  DATA    BIT     0000H   1    
+rxChr. . . . . . . . . . . . . . . . .  PUBLIC  DATA    BASE    0000H   1    
+Delay25ms. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+PrintChar. . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  c?058. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+  c?058. . . . . . . . . . . . . . . .  PARAM   DATA    BASE    0000H   1    
+PrintString. . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+  s?059. . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+  s?059. . . . . . . . . . . . . . . .  PARAM   DATA    PTR     0000H   3    
+main . . . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+Serial . . . . . . . . . . . . . . . .  PUBLIC  CODE    PROC    -----   -----
+C51 COMPILER V6.11.4C,  MAIN                      03/12/110  16:10:19  PAGE  4
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    166    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILATION COMPLETE.  0 WARNING,  0 ERROR

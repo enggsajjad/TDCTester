@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o f:\20110301test_circuit//ChronoTester -u 0 F:\20110301TEST_CIRCUIT\chronotester.bit -x xc17v01 
+
+PROM f:\20110301test_circuit//ChronoTester.prm map: Wed May 15 16:29:32 2013
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          205K
+PROM start    0000:0000
+PROM end      0003:33ff
+PROM checksum 01568395
+
+        Addr1        Addr2 File(s)
+    0000:0000    0002:8c43 F:/20110301TEST_CIRCUIT/chronotester.bit

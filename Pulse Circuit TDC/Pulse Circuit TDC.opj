@@ -1,0 +1,19 @@
+(ExpressProject "Pulse Circuit TDC"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (MPSSessionName "Sajjad Hussain")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Select "Design Resources" "Library"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -30 2 202 5 408"))
+      (Tab 0))))

@@ -1,0 +1,250 @@
+L51 CODE BANKING LINKER/LOCATOR V4.08.06        03/12/110  16:10:19  PAGE  1
+WIN32 L51 CODE BANKING LINKER/LOCATOR V4.08.06,  INVOKED BY:
+L51.EXE f:\at89c2051_v1\main.OBJ  to  F:\AT89C2051_V1\TESTER.ABS PR(F:\AT89C2&
+051_V1\TESTER.M51) PW(80) RS(128) ix 
+
+
+MEMORY MODEL: SMALL WITHOUT ANY FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED
+  F:\AT89C2051_V1\MAIN.OBJ(MAIN)
+  C:\FSI\LIB\C51S.LIB(C3S)
+  C:\FSI\LIB\C51S.LIB(IPGN1)
+  C:\FSI\LIB\C51S.LIB(_C_IDATALEN)
+
+
+LINK MAP OF MODULE: F:\AT89C2051_V1\TESTER.ABS (MAIN)
+
+    TYPE     BASE       LENGTH    RELOCATION     SEGMENT NAME
+    ----     ----       ------    ----------     ------------
+
+    * * * * * * *   DATA          M E M O R Y   * * * * * * *
+    REG      0000H      0008H     ABSOLUTE       "REG BANK 0"
+    DATA     0008H      0001H     UNIT           ?DT?MAIN
+             0009H      0017H                    *** GAP ***
+    BIT      0020H.0    0000H.1   UNIT           ?BI?MAIN
+    IDATA    0021H      0001H     * * STACK * *  _STACK
+
+    * * * * * * *   CODE          M E M O R Y   * * * * * * *
+    CODE     0000H      0003H     ABSOLUTE       
+    CODE     0003H      000FH     UNIT           ?PR?C51_STARTUP?
+    CODE     0012H      0010H     UNIT           ?PR?DELAY25MS?MAIN
+             0022H      0001H                    *** GAP ***
+    CODE     0023H      0003H     ABSOLUTE       
+    CODE     0026H      002BH     INBLOCK        ?PR?MOVES?LIB51
+    CODE     0051H      000FH     UNIT           ?PR?_PRINTCHAR?MAIN
+    CODE     0060H      0026H     UNIT           ?PR?_PRINTSTRING?MAIN
+    CODE     0086H      0052H     UNIT           ?PR?MAIN?MAIN
+    CODE     00D8H      000FH     UNIT           ?PR?SERIAL?MAIN
+
+EXECUTABLE SUMMARY:
+-------------------
+    Total INTERNAL storage requirement:  0009H.1 (9.1)
+    Total EXTERNAL storage requirement:  0000H (0)
+    Total   CODE   storage requirement:  00E6H (230)
+Note:  Summary does not include dynamic stack requirements
+
+
+REFERENCE MAP OF MODULE: F:\AT89C2051_V1\TESTER.ABS (MAIN)
+
+SEGMENT
+   +-->CALLED SEGMENT
+---------------------
+?PR?_PRINTSTRING?MAIN
+   +-->?PR?_PRINTCHAR?MAIN
+
+?PR?MAIN?MAIN
+   +-->?PR?DELAY25MS?MAIN
+   +-->?PR?_PRINTCHAR?MAIN
+
+
+SYMBOL TABLE FOR F:\AT89C2051_V1\TESTER.ABS(MAIN)
+--------------------------------------------------
+
+    VALUE              TYPE               NAME
+    -----              ----               ----
+
+	-------            MODULE             MAIN
+	C:0000H            SYMBOL             _ICE_DUMMY_
+	C:00D8H            PUBLIC             Serial
+L51 CODE BANKING LINKER/LOCATOR V4.08.06          03/12/110  16:10:19  PAGE  2
+
+	C:0086H            PUBLIC             main
+	C:0060H            PUBLIC             _PrintString
+	C:0051H            PUBLIC             _PrintChar
+	C:0012H            PUBLIC             Delay25ms
+	D:0008H            PUBLIC             rxChr
+	B:0000H            PUBLIC             rxflag
+	B:0095H            SYMBOL             CLK
+	B:0094H            SYMBOL             UP_DWN
+	B:0093H            SYMBOL             relay
+	B:00D7H            SYMBOL             CY
+	B:00D6H            SYMBOL             AC
+	B:00D5H            SYMBOL             F0
+	B:00D4H            SYMBOL             RS1
+	B:00D3H            SYMBOL             RS0
+	B:00D2H            SYMBOL             OV
+	B:00D1H            SYMBOL             FL
+	B:00D0H            SYMBOL             P
+	B:00BCH            SYMBOL             PS
+	B:00BBH            SYMBOL             PT1
+	B:00BAH            SYMBOL             PX1
+	B:00B9H            SYMBOL             PT0
+	B:00B8H            SYMBOL             PX0
+	B:00B6H            SYMBOL             AOUT
+	B:00B5H            SYMBOL             T1
+	B:00B4H            SYMBOL             T0
+	B:00B3H            SYMBOL             INT1
+	B:00B2H            SYMBOL             INT0
+	B:00B1H            SYMBOL             TXD
+	B:00B0H            SYMBOL             RXD
+	B:00B7H            SYMBOL             P3_7
+	B:00B5H            SYMBOL             P3_5
+	B:00B4H            SYMBOL             P3_4
+	B:00B3H            SYMBOL             P3_3
+	B:00B2H            SYMBOL             P3_2
+	B:00B1H            SYMBOL             P3_1
+	B:00B0H            SYMBOL             P3_0
+	B:00AFH            SYMBOL             EA
+	B:00ADH            SYMBOL             ET2
+	B:00ACH            SYMBOL             ES
+	B:00ABH            SYMBOL             ET1
+	B:00AAH            SYMBOL             EX1
+	B:00A9H            SYMBOL             ET0
+	B:00A8H            SYMBOL             EX0
+	B:009FH            SYMBOL             SM0
+	B:009EH            SYMBOL             SM1
+	B:009DH            SYMBOL             SM2
+	B:009CH            SYMBOL             REN
+	B:009BH            SYMBOL             TB8
+	B:009AH            SYMBOL             RB8
+	B:0099H            SYMBOL             TI
+	B:0098H            SYMBOL             RI
+	B:0091H            SYMBOL             AIN1
+	B:0090H            SYMBOL             AIN0
+	B:0097H            SYMBOL             P1_7
+	B:0096H            SYMBOL             P1_6
+	B:0095H            SYMBOL             P1_5
+	B:0094H            SYMBOL             P1_4
+	B:0093H            SYMBOL             P1_3
+	B:0092H            SYMBOL             P1_2
+	B:0091H            SYMBOL             P1_1
+	B:0090H            SYMBOL             P1_0
+	B:008FH            SYMBOL             TF1
+	B:008EH            SYMBOL             TR1
+	B:008DH            SYMBOL             TF0
+	B:008CH            SYMBOL             TR0
+	B:008BH            SYMBOL             IE1
+	B:008AH            SYMBOL             IT1
+	B:0089H            SYMBOL             IE0
+L51 CODE BANKING LINKER/LOCATOR V4.08.06          03/12/110  16:10:19  PAGE  3
+
+	B:0088H            SYMBOL             IT0
+	D:00F0H            SYMBOL             B
+	D:00E0H            SYMBOL             ACC
+	D:00D0H            SYMBOL             PSW
+	D:00B8H            SYMBOL             IP
+	D:00B0H            SYMBOL             P3
+	D:00A8H            SYMBOL             IE
+	D:0099H            SYMBOL             SBUF
+	D:0098H            SYMBOL             SCON
+	D:0090H            SYMBOL             P1
+	D:008DH            SYMBOL             TH1
+	D:008CH            SYMBOL             TH0
+	D:008BH            SYMBOL             TL1
+	D:008AH            SYMBOL             TL0
+	D:0089H            SYMBOL             TMOD
+	D:0088H            SYMBOL             TCON
+	D:0087H            SYMBOL             PCON
+	D:0083H            SYMBOL             DPH
+	D:0082H            SYMBOL             DPL
+	D:0081H            SYMBOL             SP
+	-------            PROC               DELAY25MS
+	C:0012H            LINE#              9
+	C:0012H            LINE#              9
+	C:0012H            LINE#              11
+	C:0015H            LINE#              12
+	C:0018H            LINE#              13
+	C:001AH            LINE#              14
+	C:001DH            LINE#              15
+	C:001FH            LINE#              16
+	C:0021H            LINE#              17
+	-------            ENDPROC            DELAY25MS
+	-------            PROC               _PRINTCHAR
+	C:0051H            LINE#              18
+	C:0051H            LINE#              18
+	C:0051H            LINE#              21
+	C:0053H            LINE#              22
+	C:005AH            LINE#              23
+	C:005FH            LINE#              24
+	-------            ENDPROC            _PRINTCHAR
+	-------            PROC               _PRINTSTRING
+	C:0060H            LINE#              25
+	C:0060H            LINE#              25
+	C:0066H            LINE#              27
+	C:0071H            LINE#              26
+	C:0071H            LINE#              29
+	C:007EH            LINE#              30
+	C:0085H            LINE#              32
+	-------            ENDPROC            _PRINTSTRING
+	-------            PROC               MAIN
+	C:0086H            LINE#              33
+	C:0086H            LINE#              33
+	C:0086H            LINE#              35
+	C:0089H            LINE#              36
+	C:008CH            LINE#              37
+	C:008FH            LINE#              38
+	C:0092H            LINE#              39
+	C:0094H            LINE#              40
+	C:0096H            LINE#              41
+	C:0098H            LINE#              42
+	C:009DH            LINE#              43
+	C:00A0H            LINE#              44
+	C:00A3H            LINE#              45
+	C:00A3H            LINE#              34
+	C:00A3H            LINE#              47
+	C:00A6H            LINE#              34
+	C:00A6H            LINE#              49
+	C:00A8H            LINE#              50
+	C:00BBH            LINE#              34
+L51 CODE BANKING LINKER/LOCATOR V4.08.06          03/12/110  16:10:19  PAGE  4
+
+	C:00BBH            LINE#              53
+	C:00BDH            LINE#              54
+	C:00C0H            LINE#              55
+	C:00C3H            LINE#              56
+	C:00C5H            LINE#              57
+	C:00C7H            LINE#              59
+	C:00C9H            LINE#              60
+	C:00CBH            LINE#              62
+	C:00CDH            LINE#              63
+	C:00CFH            LINE#              65
+	C:00D1H            LINE#              66
+	C:00D4H            LINE#              67
+	C:00D6H            LINE#              68
+	C:00D6H            LINE#              71
+	C:00D6H            LINE#              75
+	-------            ENDPROC            MAIN
+	-------            PROC               SERIAL
+	C:00D8H            LINE#              76
+	C:00DAH            LINE#              76
+	C:00DAH            LINE#              78
+	C:00DDH            LINE#              77
+	C:00DDH            LINE#              80
+	C:00DFH            LINE#              81
+	C:00E2H            LINE#              82
+	C:00E6H            LINE#              84
+	-------            ENDPROC            SERIAL
+	-------            ENDMOD             MAIN
+	C:0003H            PUBLIC             ?C_START3
+	C:0026H            PUBLIC             IPGN1?C
+	N:007FH            PUBLIC             IDATALEN
+	N:00FFH            PUBLIC             _INITP2?
+
+UNCALLED SEGMENTS:
+------------------
+    ?PR?_PRINTSTRING?MAIN: Function _PRINTSTRING in file F:\AT89C2051_V1\MAIN.O&
+BJ was not called
+
+LINK/LOCATE RUN COMPLETE,  NO ERROR FOUND.

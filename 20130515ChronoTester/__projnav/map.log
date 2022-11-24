@@ -1,0 +1,4 @@
+Mapping Module ChronoTester . . .
+MAP command line:
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o ChronoTester_map.ncd ChronoTester.ngd ChronoTester.pcf
+Mapping Module ChronoTester: DONE

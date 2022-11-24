@@ -1,0 +1,4 @@
+Post Route Timing Report for Module ChronoTester . . .
+TRACE command line and options:
+trce -intstyle ise -e 3 -l 3 -xml ChronoTester ChronoTester.ncd -o ChronoTester.twr ChronoTester.pcf
+Post Route Timing Report for Module ChronoTester : DONE

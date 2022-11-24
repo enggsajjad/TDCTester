@@ -1,0 +1,74 @@
+--------------------------------------------------------------------------------
+Release 6.1i Trace G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+C:/Xilinx/bin/nt/trce.exe -intstyle ise -e 3 -l 3 -xml ChronoTester
+ChronoTester.ncd -o ChronoTester.twr ChronoTester.pcf
+
+
+Design file:              ChronoTester.ncd
+Physical constraint file: ChronoTester.pcf
+Device,speed:             xc2s200,-6 (PRODUCTION 1.27 2003-06-19)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  |  Clock |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) |  Phase |
+------------+------------+------------+------------------+--------+
+sw1         |   12.171(F)|   -6.304(F)|clk_BUFGP         |   0.000|
+sw2         |    2.017(R)|    0.055(R)|clk_BUFGP         |   0.000|
+sw3         |    2.471(R)|   -0.857(R)|clk_BUFGP         |   0.000|
+sw4         |    3.303(R)|   -1.799(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+clkout      |    9.739(R)|clk_BUFGP         |   0.000|
+led<0>      |   12.051(R)|clk_BUFGP         |   0.000|
+            |   12.398(F)|clk_BUFGP         |   0.000|
+led<1>      |   11.979(R)|clk_BUFGP         |   0.000|
+            |   11.207(F)|clk_BUFGP         |   0.000|
+led<2>      |   11.979(R)|clk_BUFGP         |   0.000|
+            |   12.474(F)|clk_BUFGP         |   0.000|
+led<3>      |   12.283(R)|clk_BUFGP         |   0.000|
+            |   11.651(F)|clk_BUFGP         |   0.000|
+led<4>      |   11.951(R)|clk_BUFGP         |   0.000|
+            |   11.913(F)|clk_BUFGP         |   0.000|
+teststart   |   10.059(F)|clk_BUFGP         |   0.000|
+teststop1   |    9.058(F)|clk_BUFGP         |   0.000|
+teststop2   |    9.335(F)|clk_BUFGP         |   0.000|
+teststop3   |    8.867(F)|clk_BUFGP         |   0.000|
+teststop4   |    9.348(F)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.071|         |    8.788|   13.169|
+---------------+---------+---------+---------+---------+
+
+Analysis completed Wed May 15 16:28:57 2013
+--------------------------------------------------------------------------------
+
+Peak Memory Usage: 51 MB

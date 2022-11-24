@@ -1,0 +1,88 @@
+# XST (Creating Lso File) : 
+ChronoTester.lso
+# xst flow : RunXST
+ChronoTester.syr
+ChronoTester.prj
+ChronoTester.sprj
+ChronoTester.ana
+ChronoTester.stx
+ChronoTester.cmd_log
+ChronoTester.ngc
+ChronoTester.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+f:\20110301test_circuit/_ngo
+ChronoTester.ngd
+ChronoTester_ngdbuild.nav
+ChronoTester.bld
+.untf
+ChronoTester.cmd_log
+# Implementation : Map
+ChronoTester_map.ncd
+ChronoTester.ngm
+ChronoTester.pcf
+ChronoTester.nc1
+ChronoTester.mrp
+ChronoTester_map.mrp
+ChronoTester.mdf
+__projnav/map.log
+ChronoTester.cmd_log
+MAP_NO_GUIDE_FILE_CPF "ChronoTester"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+ChronoTester.twr
+ChronoTester.twx
+ChronoTester.tsi
+ChronoTester.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+ChronoTester.ncd
+ChronoTester.par
+ChronoTester.pad
+ChronoTester_pad.txt
+ChronoTester_pad.csv
+ChronoTester.pad_txt
+ChronoTester.dly
+reportgen.log
+ChronoTester.xpi
+ChronoTester.grf
+ChronoTester.itr
+ChronoTester_last_par.ncd
+__projnav/par.log
+ChronoTester.placed_ncd_tracker
+ChronoTester.routed_ncd_tracker
+ChronoTester.cmd_log
+PAR_NO_GUIDE_FILE_CPF "ChronoTester"
+# Generate Programming File
+__projnav/ChronoTester_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+ChronoTester.ut
+# Generate Programming File
+ChronoTester.bgn
+ChronoTester.rbt
+ChronoTester.ll
+ChronoTester.msk
+ChronoTester.drc
+ChronoTester.nky
+ChronoTester.bit
+ChronoTester.bin
+ChronoTester.isc
+ChronoTester.cmd_log
+# Generate PROM, ACE, or JTAG File
+ChronoTester.ace
+xilinx.sys
+ChronoTester.mpm
+ChronoTester.mcs
+ChronoTester.prm
+ChronoTester.dst
+ChronoTester.exo
+ChronoTester.tek
+ChronoTester.hex
+ChronoTester.svf
+ChronoTester.stapl
+impact.cmd
+_impact.log
+_impact.cmd

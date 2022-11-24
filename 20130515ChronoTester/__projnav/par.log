@@ -1,0 +1,3 @@
+Place & Route Module ChronoTester . . .
+PAR command line: par -w -intstyle ise -ol std -t 1 ChronoTester_map.ncd ChronoTester.ncd ChronoTester.pcf
+PAR completed successfully

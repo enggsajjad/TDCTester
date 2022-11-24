@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn __projnav/ChronoTester.xst -ofn ChronoTester.syr
+ngdbuild -intstyle ise -dd f:\20110301test_circuit/_ngo -i  -p xc2s200-pq208-6 ChronoTester.ngc ChronoTester.ngd
+map -intstyle ise -p xc2s200-pq208-6 -cm area -pr b -k 4 -c 100 -tx off -o ChronoTester_map.ncd ChronoTester.ngd ChronoTester.pcf
+par -w -intstyle ise -ol std -t 1 ChronoTester_map.ncd ChronoTester.ncd ChronoTester.pcf
+trce -intstyle ise -e 3 -l 3 -xml ChronoTester ChronoTester.ncd -o ChronoTester.twr ChronoTester.pcf
+bitgen -intstyle ise -f ChronoTester.ut ChronoTester.ncd

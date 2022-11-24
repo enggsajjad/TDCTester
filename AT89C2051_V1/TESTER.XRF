@@ -1,0 +1,20 @@
+WIN32 L51 CODE BANKING LINKER/LOCATOR V4.08.06,  INVOKED BY: 
+L51.EXE f:\at89c2051_v1\main.OBJ  to  F:\AT89C2051_V1\TESTER.ABS PR(F:\AT89C2051_V1\TESTER.M51) SN(1066142959415E46769E694) PW(80) RS(128) ix 
+
+INTER-MODULE CROSS-REFERENCE LISTING
+------------------------------------
+
+    NAME. . . . . . . . USAGE   MODULE NAMES
+    ----------------------------------------
+    ?C_START3 . . . . . CODE    [C3S]:  MAIN 
+    DELAY25MS . . . . . CODE    [MAIN]: 
+    IDATALEN  . . . . .         [_C_IDATALEN]:  C3S 
+    IPGN1?C . . . . . . CODE    [IPGN1]:  MAIN 
+    MAIN  . . . . . . . CODE    [MAIN]:  C3S 
+    RXCHR . . . . . . . DATA    [MAIN]: 
+    RXFLAG  . . . . . . BIT     [MAIN]: 
+    SERIAL  . . . . . . CODE    [MAIN]: 
+    _INITP2?  . . . . .         [_C_IDATALEN]:  C3S 
+    _PRINTCHAR  . . . . CODE    [MAIN]: 
+    _PRINTSTRING  . . . CODE    [MAIN]: 
+    _STACK  . . . . . . IDATA   [MAIN]:  C3S 

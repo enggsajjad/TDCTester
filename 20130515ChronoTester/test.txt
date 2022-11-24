@@ -1,0 +1,5 @@
+Device 0 options are:
+Row 0 => Verify	,TRUERow 1 ===== General CPLD And PROM Properties =====,
+Row 2 => Erase Before Programming	,TRUERow 3 => Read Protect	,FALSERow 4 => PROM/CoolRunner-II Usercode (8 Hex Digit)	,
+Row 14 ===== PROM Specific Properties =====,
+Row 15 => Load FPGA	,TRUE

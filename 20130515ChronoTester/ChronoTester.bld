@@ -1,0 +1,21 @@
+Release 6.1i - ngdbuild G.23
+Copyright (c) 1995-2003 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd f:\20110301test_circuit/_ngo -i -p
+xc2s200-pq208-6 ChronoTester.ngc ChronoTester.ngd 
+
+Reading NGO file "F:/20110301TEST_CIRCUIT/ChronoTester.ngc" ...
+Reading component libraries for design expansion...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 39528 kilobytes
+
+Writing NGD file "ChronoTester.ngd" ...
+
+Writing NGDBUILD log file "ChronoTester.bld"...

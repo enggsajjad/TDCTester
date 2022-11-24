@@ -1,0 +1,6 @@
+# XST flow : Creating project file
+ChronoTester.prj
+# xst flow : RunXST
+ChronoTester.prj
+__projnav/ChronoTester.xst
+./xst

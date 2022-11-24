@@ -1,0 +1,48 @@
+# Reading C:/Modeltech_xe/tcl/vsim/pref.tcl 
+# do tf2.tdo 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE II vlog 5.6e Compiler 2002.10 Oct 22 2002
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# Model Technology ModelSim XE II vlog 5.6e Compiler 2002.10 Oct 22 2002
+# -- Compiling module testcounter
+# 
+# Top level modules:
+# 	testcounter
+# Model Technology ModelSim XE II vlog 5.6e Compiler 2002.10 Oct 22 2002
+# -- Compiling module tf2
+# 
+# Top level modules:
+# 	tf2
+# vsim -L simprims_ver -lib work -t 1ps +maxdelays tf2 glbl 
+# Loading work.tf2
+# Loading work.testcounter
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_OR2
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_FF
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_LUT4
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_BUF
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_XOR2
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_INV
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_OPAD
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_TRI
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_IPAD
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_ZERO
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_MUX2
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_ONE
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.X_CKBUF
+# Loading work.glbl
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.ffsrce
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.x_lut4_mux4
+# Loading C:/Modeltech_xe/win32xoem/../xilinx/verilog/simprim_ver.mux
+# .wave
+# .structure
+# .signals
+# Loading testcounter_timesim.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /tf2/uut
+run -all
+destroy .wave
+# Break key hit 
+# Simulation stop requested

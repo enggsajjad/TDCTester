@@ -1,0 +1,24 @@
+NET "clk" LOC = "p77";
+
+NET "sw1" LOC = "p33"; #J6 25	 usec or msec
+NET "sw2" LOC = "p35"; #J6	27  select
+NET "sw3" LOC = "p37"; #J6 25	 triggering
+NET "sw4" LOC = "p42"; #J6 27  mono mult
+
+
+NET "teststart" LOC = "p153"; #J3-32
+NET "teststop1"  LOC = "p147"; #J3-26
+NET "teststop2"  LOC = "p139"; #J3-26
+NET "teststop3"  LOC = "p127"; #J3-26
+NET "teststop4"  LOC = "p120"; #J3-26
+
+
+NET "led<0>" LOC = "p71";
+NET "led<1>" LOC = "p74";
+NET "led<2>" LOC = "p75";
+NET "led<3>" LOC = "p83";
+NET "led<4>" LOC = "p86";
+#ET "led<5>" LOC = "p136";
+#NET "led<6>" LOC = "p134";
+NET "clkout" LOC = "p205";
+
